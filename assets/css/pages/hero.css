@@ -1,0 +1,80 @@
+/* ==========================================================================
+   DapurYatimDhuafa - Hero Section Styles
+   Fungsi: Layout Banner Utama (BAB 11, 24, & 34)
+   ========================================================================== */
+
+.hero {
+  padding-top: 100px; /* Memberi ruang di bawah header sticky */
+  padding-bottom: var(--space-64);
+  background-color: var(--bg-light);
+}
+
+.hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-24);
+  display: flex; /* Mengatur tata letak kiri-kanan (BAB 24) */
+  align-items: center;
+  gap: var(--space-48);
+}
+
+.hero__content {
+  flex: 1; /* Teks mengambil separuh lebar layar */
+}
+
+.hero__badge {
+  display: inline-block;
+  padding: var(--space-4) var(--space-16);
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: var(--space-16);
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-24);
+  color: var(--text-dark);
+}
+
+.hero__description {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-32);
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-16);
+}
+
+.hero__image-wrapper {
+  flex: 1; /* Gambar mengambil separuh lebar layar */
+}
+
+.hero__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* RESPONSIVE: Tampilan Mobile/Tablet (BAB 34) */
+@media screen and (max-width: 767px) {
+  .hero__container {
+    flex-direction: column; /* Mengubah susunan menjadi atas-bawah */
+    text-align: center;
+  }
+
+  .hero__title {
+    font-size: 1.8rem;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+}

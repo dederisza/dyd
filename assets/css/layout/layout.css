@@ -1,0 +1,122 @@
+/* ==========================================================================
+   DapurYatimDhuafa - Layout & Footer Styles
+   Fungsi: Mengatur struktur makro halaman dan komponen Footer (BAB 11 & 42)
+   ========================================================================== */
+
+/* 1. Pengaturan Jarak Global untuk Konten Utama di bawah Header Sticky */
+main {
+  min-height: 80vh; /* Memastikan konten utama memiliki tinggi minimal */
+}
+
+/* 2. Kerangka Utama Footer */
+.main-footer {
+  background-color: #1a1a1a; /* Menggunakan warna abu tua/hitam netral (BAB 22) */
+  color: #e0e0e0;
+  padding-top: var(--space-64);
+  border-top: 4px solid var(--primary-color); /* Aksen garis jingga tipis di atas footer */
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-24) var(--space-48) var(--space-24);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr; /* Pembagian lebar kolom desktop */
+  gap: var(--space-48);
+}
+
+/* 3. Gaya Komponen di Dalam Kolom */
+.footer__logo-img {
+  height: 45px; /* Sedikit lebih besar dari header karena area footer lebih luas */
+  width: auto;
+  display: block;
+  margin-bottom: var(--space-16);
+}
+
+.footer__logo span {
+  color: var(--primary-color);
+}
+
+.footer__description {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  line-height: 1.6;
+}
+
+.footer__title {
+  font-size: 1.1rem;
+  color: var(--bg-white);
+  margin-bottom: var(--space-24);
+  position: relative;
+}
+
+/* Garis bawah dekoratif kecil pada judul kolom */
+.footer__title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.footer__links,
+.footer__info {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  font-size: 0.9rem;
+}
+
+.footer__link {
+  color: #a0a0a0;
+  transition: var(--transition-fast);
+}
+
+.footer__link:hover {
+  color: var(--primary-color);
+  transform: translateX(
+    4px
+  ); /* Efek teks bergeser sedikit saat didekati kursor */
+}
+
+.footer__info li {
+  color: #a0a0a0;
+  line-height: 1.5;
+}
+
+.footer__info strong {
+  color: var(--bg-white);
+  display: block;
+  margin-bottom: 2px;
+}
+
+/* 4. Baris Hak Cipta Paling Bawah (Copyright Bar) */
+.footer__bottom {
+  background-color: #111111;
+  padding: var(--space-24) 0;
+  border-top: 1px solid #2a2a2a;
+  font-size: 0.85rem;
+  color: #777777;
+  text-align: center;
+}
+
+.footer__bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-24);
+}
+
+/* 5. RESPONSIVE SYSTEM: Tampilan Mobile/Tablet (BAB 34) */
+@media screen and (max-width: 768px) {
+  .footer__container {
+    grid-template-columns: 1fr; /* Kolom otomatis menumpuk vertikal di HP */
+    gap: var(--space-32);
+  }
+
+  .footer__title {
+    margin-bottom: var(--space-16);
+  }
+}

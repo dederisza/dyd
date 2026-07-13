@@ -1,0 +1,571 @@
+/* ==========================================================================
+   DapurYatimDhuafa - Section & Card Styles
+   Fungsi: Mengatur layout section umum dan komponen kartu dampak (BAB 11 & 30)
+   ========================================================================== */
+
+/* 1. Aturan Umum Section Impact */
+.impact {
+  padding: var(--space-64) 0;
+  background-color: var(--bg-white);
+}
+
+.impact__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-24);
+}
+
+.impact__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto var(--space-48) auto;
+}
+
+.impact__title {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: var(--space-16);
+}
+
+.impact__subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* 2. Grid System untuk Kartu (BAB 24) */
+.impact__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Kolom sejajar di desktop */
+  gap: var(--space-32); /* Jarak konsisten berbasis skala 8px (BAB 25) */
+}
+
+/* 3. Komponen Impact Card (BAB 27 & 30) */
+.impact-card {
+  background-color: var(--bg-light);
+  padding: var(--space-32) var(--space-24);
+  border-radius: var(--radius-md); /* Radius konsisten (BAB 26) */
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+/* Efek Hover Halus */
+.impact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.impact-card__icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-16) auto;
+}
+
+.impact-card__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.impact-card__number {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--space-8);
+}
+
+.impact-card__label {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* 4. RESPONSIVE SYSTEM: Tampilan Mobile/Tablet (BAB 24 & 34) */
+@media screen and (max-width: 991px) {
+  .impact__grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 Kolom di tablet */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .impact__grid {
+    grid-template-columns: 1fr; /* 1 Kolom menumpuk di HP */
+    gap: var(--space-16);
+  }
+
+  .impact__title {
+    font-size: 1.6rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   KOMPONEN PRODUK PILIHAN (BAB 11 & 30)
+   -------------------------------------------------------------------------- */
+.products {
+  padding: var(--space-64) 0;
+  background-color: var(
+    --bg-light
+  ); /* Selang-seling warna latar agar dinamis */
+}
+
+.products__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-24);
+}
+
+.products__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto var(--space-48) auto;
+}
+
+.products__title {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: var(--space-16);
+}
+
+.products__subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* Grid System Produk (BAB 24) */
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 Kolom berdampingan di desktop */
+  gap: var(--space-32);
+}
+
+/* Kerangka Product Card (BAB 30) */
+.product-card {
+  background-color: var(--bg-white);
+  border-radius: var(--radius-md);
+  overflow: hidden; /* Memastikan sudut gambar ikut membulat */
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-normal);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.product-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px; /* Mengunci tinggi wadah agar semua kartu tingginya sama */
+  overflow: hidden;
+}
+
+.product-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Memotong gambar secara proporsional ke tengah area kartu */
+  transition: var(--transition-normal);
+}
+
+/* Efek zoom halus saat kartu di-hover agar interaktif */
+.product-card:hover .product-card__image {
+  transform: scale(1.05);
+}
+
+.product-card__badge {
+  position: absolute;
+  top: var(--space-12);
+  left: var(--space-12);
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+  padding: var(--space-4) var(--space-12);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+}
+
+.product-card__content {
+  padding: var(--space-24);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-card__mitra {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+
+.product-card__name {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: var(--space-16);
+}
+
+.product-card__excerpt {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--space-24);
+  font-style: italic; /* Memberi kesan pembeda bahwa ini adalah narasi kisah */
+  position: relative;
+  padding-left: var(--space-12);
+  border-left: 2px solid var(--border-color); /* Garis vertikal halus di kiri teks cerita */
+}
+
+.product-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* Memaksa harga dan tombol selalu rata di bawah kartu */
+}
+
+.product-card__price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* RESPONSIVE: Tampilan Mobile (BAB 34) */
+@media screen and (max-width: 576px) {
+  .products__grid {
+    grid-template-columns: 1fr; /* 1 Kolom penuh di HP */
+    gap: var(--space-24);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   KOMPONEN CERITA PILIHAN (BAB 11 & 30)
+   -------------------------------------------------------------------------- */
+.stories {
+  padding: var(--space-64) 0;
+  background-color: var(
+    --bg-white
+  ); /* Kembali ke latar putih agar kontras dengan section produk */
+}
+
+.stories__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-24);
+}
+
+.stories__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto var(--space-48) auto;
+}
+
+.stories__title {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: var(--space-16);
+}
+
+.stories__subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* Grid System Cerita (BAB 24) */
+.stories__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 Kolom berdampingan di desktop */
+  gap: var(--space-32);
+}
+
+/* Kerangka Story Card (BAB 30) */
+.story-card {
+  background-color: var(--bg-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-normal);
+}
+
+.story-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.story-card__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 260px; /* Tinggi proporsional untuk foto potret/landscape */
+  overflow: hidden;
+}
+
+.story-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Wajah mitra akan tetap proporsional di tengah */
+}
+
+.story-card__content {
+  padding: var(--space-24);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.story-card__tag {
+  display: inline-block;
+  align-self: flex-start;
+  padding: var(--space-4) var(--space-12);
+  background-color: var(--bg-white);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-12);
+}
+
+.story-card__title {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: var(--space-16);
+  line-height: var(--line-height-heading);
+}
+
+.story-card__snippet {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-24);
+}
+
+.story-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* Memaksa footer kartu selalu rata di bawah */
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--space-16);
+}
+
+.story-card__author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.story-card__link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: var(--transition-fast);
+}
+
+.story-card__link:hover {
+  color: var(--primary-hover);
+  transform: translateX(
+    3px
+  ); /* Efek panah bergeser sedikit ke kanan saat di-hover */
+}
+
+/* RESPONSIVE: Tampilan Mobile (BAB 34) */
+@media screen and (max-width: 768px) {
+  .stories__grid {
+    grid-template-columns: 1fr; /* 1 Kolom penuh di HP */
+    gap: var(--space-24);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   KOMPONEN CARA KERJA / STEPS (BAB 11 & 16)
+   -------------------------------------------------------------------------- */
+.steps {
+  padding: var(--space-64) 0;
+  background-color: var(
+    --bg-light
+  ); /* Latar belakang selang-seling agar tidak monoton */
+}
+
+.steps__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-24);
+}
+
+.steps__header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto var(--space-48) auto;
+}
+
+.steps__title {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: var(--space-16);
+}
+
+.steps__subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* Grid Tiga Kolom Alur (BAB 24) */
+.steps__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-48);
+  position: relative;
+}
+
+/* Item Langkah Individual */
+.step-item {
+  text-align: center;
+  position: relative;
+}
+
+/* Penomoran Alur Berbentuk Lingkaran Kapsul (BAB 26) */
+.step-item__number {
+  width: 56px;
+  height: 56px;
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-24) auto;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  z-index: 2;
+}
+
+.step-item__title {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: var(--space-12);
+}
+
+.step-item__description {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* RESPONSIVE: Tampilan Mobile/Tablet (BAB 34) */
+@media screen and (max-width: 768px) {
+  .steps__grid {
+    grid-template-columns: 1fr; /* Menumpuk satu kolom ke bawah di HP */
+    gap: var(--space-32);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   KOMPONEN AJAKAN BERMITRA / CTA PARTNERSHIP (BAB 11 & 15)
+   -------------------------------------------------------------------------- */
+.partnership-cta {
+  padding: var(--space-64) 0;
+  background-color: var(
+    --primary-color
+  ); /* Menggunakan warna brand utama (BAB 22) */
+  color: var(--bg-white);
+  text-align: center;
+}
+
+.partnership-cta__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-24);
+}
+
+.partnership-cta__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.partnership-cta__badge {
+  display: inline-block;
+  padding: var(--space-4) var(--space-16);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Transparansi putih di atas warna jingga */
+  color: var(--bg-white);
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: var(--space-16);
+}
+
+.partnership-cta__title {
+  font-size: 2.25rem;
+  color: var(--bg-white);
+  margin-bottom: var(--space-24);
+  line-height: var(--line-height-heading);
+}
+
+.partnership-cta__description {
+  font-size: 1.1rem;
+  color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Teks deskripsi agak lembut agar nyaman dibaca */
+  margin-bottom: var(--space-32);
+  line-height: 1.6;
+}
+
+.partnership-cta__actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-16);
+}
+
+/* Modifikasi Khusus Tombol Di Atas Latar Belakang Jingga (BAB 29) */
+.partnership-cta .btn--primary {
+  background-color: var(--bg-white);
+  color: var(--primary-color);
+}
+
+.partnership-cta .btn--primary:hover {
+  background-color: var(--bg-light);
+  color: var(--primary-hover);
+}
+
+.partnership-cta .btn--light {
+  border-color: var(--bg-white);
+  color: var(--bg-white);
+}
+
+.partnership-cta .btn--light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--bg-white);
+}
+
+/* RESPONSIVE: Tampilan Mobile (BAB 34) */
+@media screen and (max-width: 576px) {
+  .partnership-cta__title {
+    font-size: 1.75rem;
+  }
+
+  .partnership-cta__actions {
+    flex-direction: column; /* Tombol menumpuk vertical pada HP agar tidak sempit */
+    gap: var(--space-12);
+    align-items: center;
+  }
+
+  .partnership-cta .btn {
+    width: 100%; /* Tombol melebar penuh di layar HP */
+    max-width: 280px;
+  }
+}

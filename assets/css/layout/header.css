@@ -1,0 +1,81 @@
+/* ==========================================================================
+   DapurYatimDhuafa - Header & Navigation Styles
+   Fungsi: Mengatur tampilan menu atas, responsivitas, dan efek sticky (BAB 12)
+   ========================================================================== */
+
+/* 1. Kontainer Utama Header */
+.main-header {
+  position: fixed; /* Membuat menu tetap menempel di atas saat di-scroll (BAB 12) */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-white);
+  box-shadow: var(
+    --shadow-sm
+  ); /* Memberikan bayangan halus di bawah menu (BAB 27) */
+  z-index: 1000; /* Memastikan menu selalu berada di paling depan/atas elemen lain */
+  transition: var(--transition-normal);
+}
+
+/* 2. Pembungkus Navigasi Dalam (Layout Grid/Flexbox - BAB 24 & 42) */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Logo di kiri, Menu di tengah, CTA di kanan */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-24); /* Jarak atas-bawah dan kiri-kanan (BAB 25) */
+  height: 70px; /* Tinggi standar navbar */
+}
+
+/* 3. Gaya Visual Logo (BAB 12 & 18) */
+.navbar__logo-img {
+  height: 40px; /* Ukuran ideal agar proporsional dengan tinggi navbar 70px */
+  width: auto; /* Menjaga aspek rasio logo agar tidak gepeng */
+  display: block;
+}
+
+/* 4. Menu Tautan Tengah (Tampilan Desktop) */
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  gap: var(--space-32); /* Jarak antar menu tautan */
+}
+
+.navbar__link {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+  padding: var(--space-8) 0;
+  position: relative;
+}
+
+/* Efek ketika menu diarahkan kursor (Hover State) */
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--primary-color);
+}
+
+/* 5. Aksi Kanan (Tombol & Hamburger Mobile) */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+/* Tombol Hamburger (Hanya muncul di Mobile lewat Media Query nanti) */
+.navbar__toggle {
+  display: none; /* Disembunyikan dulu di tampilan desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+}
+
+.navbar__toggle span {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-dark);
+  transition: var(--transition-fast);
+}

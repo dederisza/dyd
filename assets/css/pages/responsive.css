@@ -1,0 +1,66 @@
+/* ==========================================================================
+   DapurYatimDhuafa - Responsive Navigation Styles
+   Fungsi: Mengatur perilaku layout dari layar HP hingga Desktop (BAB 12 & 34)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   ATURAN MOBILE: Diterapkan pada layar yang lebih kecil dari 768px (HP/Tablet)
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 767px) {
+  /* 1. Aktifkan tombol Hamburger Mobile */
+  .navbar__toggle {
+    display: flex;
+  }
+
+  /* 2. Ubah susunan menu tengah menjadi panel laci tersembunyi */
+  .navbar__menu {
+    position: absolute;
+    top: 70px; /* Tepat di bawah batas navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-white);
+    flex-direction: column; /* Menu berjejer ke bawah, bukan ke samping */
+    gap: 0;
+    padding: var(--space-16) 0;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+    border-top: 1px solid var(--border-color);
+
+    /* Kondisi Awal: Sembunyikan panel menu di atas layar */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: var(--transition-normal);
+  }
+
+  /* 3. Gaya visual untuk baris menu di dalam laci mobile */
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__link {
+    display: block;
+    padding: var(--space-16) 0;
+    width: 100%;
+  }
+
+  /* 4. Kondisi Aktif: Ketika menu dibuka via JavaScript nanti */
+  .navbar__menu--open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Animasi Tombol Hamburger menjadi tanda Silang (X) saat menu terbuka */
+  .navbar__toggle--active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navbar__toggle--active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar__toggle--active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

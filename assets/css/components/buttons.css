@@ -1,0 +1,53 @@
+/* ==========================================================================
+   DapurYatimDhuafa - Button Component
+   Fungsi: Mengatur standarisasi tombol di seluruh website (BAB 29)
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: var(--space-8) var(--space-24); /* Ukuran proporsional */
+  border-radius: var(
+    --radius-pill
+  ); /* Bentuk melonjong/kapsul sesuai tren modern (BAB 26) */
+  transition: var(--transition-fast);
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Tombol Utama (Primary Button) - Jingga Hangat (BAB 15 & 29) */
+.btn--primary {
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+}
+
+/* Tombol Sekunder (Secondary Button) - Outline Style (BAB 29) */
+.btn--secondary {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+.btn--secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+}
+
+/* Efek Interaksi Tombol (Button State - BAB 29) */
+.btn--primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px); /* Efek terangkat sedikit saat didekati kursor */
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+}
+
+/* Variasi Tombol Kecil untuk Area Sempit seperti Kartu (BAB 29) */
+.btn--sm {
+  padding: var(--space-4) var(--space-16);
+  font-size: 0.85rem;
+}
