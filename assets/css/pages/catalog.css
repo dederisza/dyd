@@ -1,0 +1,88 @@
+/* ==========================================================================
+   KOMPONEN KATALOG, FILTER, & PENCARIAN (FIX SPRINT 2)
+   ========================================================================== */
+.catalog {
+  padding: 64px 0;
+  background-color: #ffffff;
+}
+
+.catalog__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Jarak aman area bar pencarian */
+.catalog__filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 32px;
+}
+
+.catalog__search-wrapper {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Padding dalam input box agar teks tidak menempel tepi */
+.catalog__search-input {
+  width: 100%;
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333333;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.catalog__search-input:focus {
+  outline: none;
+  border-color: #f26b22;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(242, 107, 34, 0.15);
+}
+
+.catalog__categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Memberikan jarak internal tombol kapsul agar teks longgar */
+.filter-btn {
+  background-color: #f5f5f5;
+  color: #666666;
+  border: 1px solid #e0e0e0;
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+  border-color: #f26b22;
+  color: #f26b22;
+}
+
+.filter-btn--active {
+  background-color: #f26b22;
+  color: #ffffff;
+  border-color: #f26b22;
+}
+
+/* RESPONSIVE LAYOUT */
+@media screen and (min-width: 768px) {
+  .catalog__filter-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

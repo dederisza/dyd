@@ -4,17 +4,18 @@
    ========================================================================== */
 
 /* 1. Kategori BASE (Aturan Dasar & Variabel Global) */
-@import url("base/variables.css");
-@import url("base/reset.css");
+@import "base/variables.css";
+@import "base/reset.css";
 
 /* 2. Kategori LAYOUT (Struktur Tata Letak Makro Halaman) */
-@import url("layout/layout.css");
-@import url("layout/header.css");
+@import "layout/header.css";
+@import "layout/layout.css";
 
 /* 3. Kategori COMPONENTS (Elemen UI Kecil yang Dapat Dipakai Ulang) */
-@import url("components/buttons.css");
+@import "components/buttons.css";
 
 /* 4. Kategori PAGES (Gaya Visual Khusus untuk Halaman Tertentu/Section) */
-@import url("pages/hero.css");
-@import url("pages/section.css");
-@import url("pages/responsive.css");
+@import "pages/hero.css";
+@import "pages/hero-internal.css";
+@import "pages/section.css";
+@import "pages/catalog.css";

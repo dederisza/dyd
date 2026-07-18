@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etalase Produk Mitra Binaan - DapurYatimDhuafa</title>
+
+    <!-- SEO & Open Graph Meta Tags (BAB 46) -->
+    <meta
+      name="description"
+      content="Jelajahi seluruh produk kuliner terkurasi hasil karya mandiri Mitra Binaan DapurYatimDhuafa."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://dederisza.github.io/dyd/pages/produk.html"
+    />
+    <meta
+      property="og:title"
+      content="Etalase Produk Mitra Binaan - DapurYatimDhuafa"
+    />
+    <meta
+      property="og:description"
+      content="Meracik Kepedulian Menjadi Kemandirian. Pilih hidangan favorit Anda."
+    />
+
+    <!-- 1. Perbaikan Favicon (Naik 1 tingkat ke root folder) -->
+    <link
+      rel="icon"
+      type="image/webp"
+      href="../assets/icons/icon-dapuryatimhuafa.webp"
+    />
+
+    <!-- CSS Master Link -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <!-- 2. Header & Navigasi (Sama Persis dengan Beranda, Jalur Disesuaikan) -->
+    <header class="main-header">
+      <nav class="navbar">
+        <a href="../index.html" class="navbar__logo">
+          <img
+            src="../assets/images/logo-horizontal-dapuryatimdhuafa.webp"
+            alt="Logo Resmi DapurYatimDhuafa"
+            class="navbar__logo-img"
+          />
+        </a>
+        <ul class="navbar__menu">
+          <li><a href="../index.html" class="navbar__link">Beranda</a></li>
+          <!-- Halaman aktif saat ini -->
+          <li>
+            <a href="produk.html" class="navbar__link navbar__link--active"
+              >Produk</a
+            >
+          </li>
+          <li><a href="kisah.html" class="navbar__link">Kisah</a></li>
+          <li><a href="tentang.html" class="navbar__link">Tentang</a></li>
+          <li><a href="kemitraan.html" class="navbar__link">Kemitraan</a></li>
+          <li><a href="kontak.html" class="navbar__link">Kontak</a></li>
+        </ul>
+        <div class="navbar__actions">
+          <a href="produk.html" class="btn btn--primary">Belanja</a>
+          <button
+            class="navbar__toggle"
+            aria-label="Buka Menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Halaman Internal (Bersih & Elegan) -->
+      <section class="page-hero">
+        <div class="page-hero__container">
+          <h1 class="page-hero__title">Etalase Produk Mitra Binaan</h1>
+          <p class="page-hero__subtitle">
+            Setiap hidangan diracik dengan keahlian, dibeli dengan kepedulian,
+            menghasilkan kemandirian.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section Katalog Utilitas -->
+      <section class="catalog">
+        <div class="catalog__container">
+          <!-- Bar Filter & Fitur Pencarian Modern (UX - Simple Before Complex) -->
+          <div class="catalog__filter-bar">
+            <div class="catalog__search-wrapper">
+              <input
+                type="text"
+                id="catalog-search"
+                class="catalog__search-input"
+                placeholder="Cari makanan favorit Anda..."
+              />
+            </div>
+            <div class="catalog__categories">
+              <button class="filter-btn filter-btn--active" data-category="all">
+                Semua
+              </button>
+              <button class="filter-btn" data-category="berat">
+                Makanan Berat
+              </button>
+              <button class="filter-btn" data-category="camilan">
+                Camilan
+              </button>
+              <button class="filter-btn" data-category="minuman">
+                Minuman
+              </button>
+            </div>
+          </div>
+
+          <!-- Grid Katalog Produk Skala Penuh (Sesuai Komponen Card Halaman Depan) -->
+          <div class="products__grid" id="catalog-grid">
+            <!-- Produk 1 (Makanan Berat) -->
+            <div class="product-card" data-type="berat">
+              <div class="product-card__image-wrapper">
+                <img
+                  src="../assets/images/produk-1.webp"
+                  alt="Nasi Bakar Ayam Suwir Kemangi buatan Ibu Aminah"
+                  class="product-card__image"
+                  loading="lazy"
+                />
+                <span class="product-card__badge">Terlaris</span>
+              </div>
+              <div class="product-card__content">
+                <span class="product-card__mitra"
+                  >Oleh: Ibu Aminah (Mitra Berdaya)</span
+                >
+                <h3 class="product-card__title">Nasi Bakar Ayam Kemangi</h3>
+                <p class="product-card__snippet">
+                  Melalui usaha nasi bakar ini, Ibu Aminah kini mampu membiayai
+                  sekolah kedua anaknya secara mandiri setelah suaminya wafat.
+                  Setiap porsi yang Anda pesan adalah barisan semangat baru.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">Rp 18.000</span>
+                  <a
+                    href="https://wa.me/628123456789?text=Saya%20mau%20pesan%20Nasi%20Bakar"
+                    class="btn btn--primary btn--sm"
+                    target="_blank"
+                    rel="noopener"
+                    >Pesan</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Produk 2 (Camilan) -->
+            <div class="product-card" data-type="camilan">
+              <div class="product-card__image-wrapper">
+                <img
+                  src="../assets/images/produk-2.webp"
+                  alt="Keripik Singkong Balado buatan Pak Jaka"
+                  class="product-card__image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="product-card__content">
+                <span class="product-card__mitra"
+                  >Oleh: Pak Jaka (Camilan Mandiri)</span
+                >
+                <h3 class="product-card__title">Keripik Singkong Balado</h3>
+                <p class="product-card__snippet">
+                  Sempat kehilangan pekerjaan akibat PHK, Pak Jaka bangkit
+                  mengolah singkong lokal menjadi camilan premium. Dukungan Anda
+                  membantu Pak Jaka membuktikan keterbatasan bukan penghalang.
+                </p>
+                <div class="product-card__footer">
+                  <span class="product-card__price">Rp 12.000</span>
+                  <a
+                    href="https://wa.me/628123456789?text=Saya%20mau%20pesan%20Keripik%20Singkong"
+                    class="btn btn--primary btn--sm"
+                    target="_blank"
+                    rel="noopener"
+                    >Pesan</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 3. Footer Resmi (Sama Persis dengan Beranda, Jalur Disesuaikan) -->
+    <footer class="main-footer">
+      <div class="footer__container">
+        <div class="footer__col">
+          <a href="../index.html" class="footer__logo">
+            <img
+              src="../assets/images/logo-web-DapurYatimDhuafa.webp"
+              alt="Logo Resmi DapurYatimDhuafa Putih"
+              class="footer__logo-img"
+            />
+          </a>
+          <p class="footer__description">
+            Platform digital pemberdayaan ekonomi berbasis dampak sosial yang
+            dikembangkan oleh PT De Risza DigiCreation bersama Yayasan Mutiara
+            Titipan Illahi sebagai mitra implementasi awal.
+          </p>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__title">Navigasi</h4>
+          <ul class="footer__links">
+            <li><a href="../index.html" class="footer__link">Beranda</a></li>
+            <li>
+              <a href="produk.html" class="footer__link">Produk Unggulan</a>
+            </li>
+            <li><a href="kisah.html" class="footer__link">Kisah Mitra</a></li>
+            <li>
+              <a href="tentang.html" class="footer__link">Tentang Kami</a>
+            </li>
+            <li>
+              <a href="kemitraan.html" class="footer__link">Kemitraan CSR</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__title">Kontak Resmi</h4>
+          <ul class="footer__info">
+            <li>
+              <strong>Alamat:</strong> Jl. Mutiara Titipan Illahi, Bandung, Jawa
+              Barat
+            </li>
+            <li><strong>Email:</strong> info@dapuryatimdhuafa.com</li>
+            <li><strong>WhatsApp Admin:</strong> +62 812-3456-789</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__bottom-container">
+          <p>
+            &copy; 2026 DapurYatimDhuafa. All Rights Reserved. Powered by PT De
+            Risza DigiCreation.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../assets/js/app.js" type="module"></script>
+  </body>
+</html>

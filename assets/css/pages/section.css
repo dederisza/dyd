@@ -191,7 +191,7 @@
 }
 
 .product-card__content {
-  padding: var(--space-24);
+  padding: 20px !important; /* Memberikan ruang udara di dalam kotak produk */
   display: flex;
   flex-direction: column;
   flex-grow: 1;
