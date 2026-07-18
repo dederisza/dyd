@@ -2,58 +2,35 @@
 
 Platform digital pemberdayaan ekonomi berbasis dampak sosial yang dikembangkan sebagai Foodcourt Online Terkurasi untuk menghubungkan hasil karya Mitra Binaan dengan masyarakat luas.
 
-## 📁 Struktur Proyek Terimplementasi (BAB 40)
+## 📁 Arsitektur Folder Proyek Final (BAB 40 & 42)
 
 dapuryatimdhuafa/
 │
-├── index.html # Halaman Utama (Homepage) - HTML5 Semantik
+├── index.html # Halaman Utama (Homepage)
 ├── README.md # Dokumentasi Utama Proyek
+├── CHANGELOG.md # Catatan Perubahan Proyek
 │
 ├── pages/ # Halaman Internal Web (SEO Friendly)
-│ ├── produk.html
-│ ├── detail-produk.html
-│ ├── kisah.html
-│ ├── tentang.html
-│ ├── kemitraan.html
-│ └── kontak.html
+│ ├── produk.html # Etalase Katalog & Filter Drop-down
+│ ├── detail-nasi-bakar.html # Detail Produk & Dampak Sosial Ibu Aminah
+│ ├── detail-keripik-singkong.html # Detail Produk & Dampak Sosial Pak Jaka
+│ ├── kisah.html # Halaman Cerita Transformasi Mitra (Layout Zigzag)
+│ ├── tentang.html # Profil Gerakan, Visi, Misi, & Legalitas B2B
+│ ├── kemitraan.html # Proposal Skema Kemitraan CSR & Procurement
+│ └── kontak.html # Saluran Komunikasi CS Satu Pintu (WhatsApp)
 │
 └── assets/
-├── css/ # Arsitektur CSS Modular (BAB 42)
+├── css/ # Arsitektur CSS Modular Standar Industri
 │ ├── base/ # variables.css, reset.css
 │ ├── layout/ # layout.css, header.css
-│ ├── components/ # buttons.css
-│ ├── pages/ # hero.css, section.css, responsive.css
+│ ├── components/ # buttons.css (Utilitas sudut kotak tegas)
+│ ├── pages/ # hero.css, hero-internal.css, section.css, catalog.css, stories.css
 │ └── style.css # Master Hub CSS Imports
 │
-├── js/ # Vanilla JS ES6+ Modular (BAB 43)
-│ ├── modules/ # navigation.js
-│ ├── pages/
-│ └── app.js # Master Hub JS
+├── js/ # Vanilla JS ES6+ Modern
+│ ├── modules/ # navigation.js (Hamburger menu lipat)
+│ ├── pages/ # catalog.js (Logika filter drop-down & search instan)
+│ └── app.js # Master Hub JavaScript Execution
 │
-├── icons/ # Aset Vektor & Favicon
-│ └── icon-dapuryatimhuafa.webp
-│
-└── images/ # Aset Visual Web (.webp)
-├── logo-horizontal-dapuryatimdhuafa.webp
-├── logo-web-DapurYatimDhuafa.webp
-├── hero-display.webp
-├── produk-1.webp
-├── produk-2.webp
-├── cerita-1.webp
-└── cerita-2.webp
-
-## 🖼️ Dokumentasi Aset Visual Terinput (WebP Format)
-
-1. **Favicon**: `assets/icons/icon-dapuryatimhuafa.webp` (Resolusi Otomatis Browser)
-2. **Logo Header**: `assets/images/logo-horizontal-dapuryatimdhuafa.webp` (Tinggi dikunci 40px di CSS)
-3. **Logo Footer**: `assets/images/logo-web-DapurYatimDhuafa.webp` (Tinggi dikunci 45px di CSS)
-4. **Hero Image**: `assets/images/hero-display.webp` (Responsive Width, Aspect Ratio Cover)
-5. **Product Cards**: `produk-1.webp`, `produk-2.webp` (Tinggi dikunci 220px, Object-fit Cover)
-6. **Story Cards**: `cerita-1.webp`, `cerita-2.webp` (Tinggi dikunci 260px, Object-fit Cover)
-
-## 🛠️ Tech Stack & Standar Kualitas
-
-- HTML5 Semantik & Aksesibilitas WCAG 2.2 AA
-- Vanilla CSS3 Modern (Flexbox & Grid) tanpa Framework External
-- Vanilla JavaScript ES6+ Modular
-- Target Kecepatan: Google PageSpeed Desktop 95+, Mobile 90+
+├── icons/ # Aset Favicon & Vektor Resmi
+└── images/ # Aset Gambar Visual Web (.webp)

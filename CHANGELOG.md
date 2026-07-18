@@ -1,6 +1,36 @@
 # Changelog - DapurYatimDhuafa
 
-Semua perubahan formal pada proyek ini akan didokumentasikan di file ini berdasarkan aturan spesifikasi **BAB 71 & 72**.
+Semua perubahan formal pada proyek ini didokumentasikan berdasarkan aturan spesifikasi **BAB 71 & 72**.
+
+## [v2.0.0] - 2026-07-19
+
+### Added (Ditambahkan)
+
+- **Sprint 2 (Halaman Etalase & Filter)**:
+  - Pembuatan sistem penyaringan modern menggunakan menu _Drop-down_ minimalis untuk memangkas ruang visual.
+  - Implementasi kotak pencarian (_Search Input_) berjarak longgar dengan efek _glow focus_ jingga khas brand.
+  - Penambahan modul JavaScript `catalog.js` untuk menyaring produk secara _real-time_ berdasarkan teks nama, cuplikan kisah, dan kategori produk tanpa memuat ulang halaman (_Single Page Experience_).
+- **Sprint 3 (Halaman Detail Produk)**:
+  - Pembuatan file spesifikasi `detail-nasi-bakar.html` (Ibu Aminah) dan `detail-keripik-singkong.html` (Pak Jaka).
+  - Integrasi komponen _Hero Banner Internal_ di setiap atas halaman detail produk dengan dekorasi judul terpusat yang seimbang.
+  - Penambahan visualisasi tabel spesifikasi teknis produk (Komposisi, Kemasan, Kapasitas Produksi, dan Sertifikasi Kurasi) dipadukan kotak kutipan dampak sosial (_Impact Quote_).
+- **Sprint 4 (Halaman Tentang Kami)**:
+  - Pembuatan layout dua kolom asimetris untuk menyajikan Visi dan Misi gerakan secara teratur.
+  - Penyusunan blok narasi profil yang mengutamakan kredibilitas kerja sama B2B antara PT De Risza DigiCreation dan Yayasan Mutiara Titipan Illahi.
+- **Sprint 5 (Halaman Kemitraan CSR)**:
+  - Implementasi kartu proposal penawaran terarah (_Procurement_ & _CSR Sustainability_) menggunakan bayangan halus (_box-shadow_) dan ruang pembungkus yang lapang.
+- **Sprint 6 (Halaman Kontak)**:
+  - Pembuatan visualisasi 3 pilar informasi saluran pengaduan resmi (Alamat Fisik, WhatsApp CS, dan Email Korporat).
+
+### Fixed (Diperbaiki)
+
+- **Resolusi Broken Layout**: Mengubah seluruh implementasi jarak mepet dengan menyuntikkan unit piksel solid (`padding: 32px;`, `padding: 40px;`) yang stabil lintas perangkat.
+- **Navbar Sticky Overlap**: Memperbaiki judul halaman internal yang sempat terpotong dengan memberikan _padding-top: 120px_ pada kelas `.page-hero` berkas `hero-internal.css`.
+- **Navigasi Global & Bentuk Tombol**: Penyelarasan tautan navigasi `../` antar sub-folder agar logo dan favicon terbaca sempurna, serta menambahkan kelas `.btn--rect` pada `buttons.css` untuk mengubah tombol kapsul menjadi sudut kotak tegas (_straight border-radius_) demi keselarasan visual komponen _badge_.
+
+### Status Proyek
+
+- **Seluruh Halaman Web MVP (Total 6 Halaman Utama + 2 Detail)**: **SELESAI 100% / PERFECTLY DONE** (Memenuhi kriteria _Definition of Excellence_ BAB 76).
 
 ## [v1.0.0] - 2026-07-13
 
