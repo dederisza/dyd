@@ -3,7 +3,8 @@
    ========================================================================== */
 .page-hero {
   background-color: var(--bg-light);
-  padding: var(--space-48) 0;
+  /* Solusi: Menambahkan padding atas 120px untuk memberi ruang bagi navbar sticky */
+  padding: 120px 0 48px 0;
   text-align: center;
   border-bottom: 1px solid var(--border-color);
 }
