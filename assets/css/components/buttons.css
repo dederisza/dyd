@@ -51,3 +51,7 @@
   padding: var(--space-4) var(--space-16);
   font-size: 0.85rem;
 }
+
+.btn--rect {
+  border-radius: 4px !important;
+}

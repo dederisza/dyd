@@ -1,0 +1,100 @@
+/* ==========================================================================
+   KOMPONEN HALAMAN KISAH MITRA (SPRINT 3)
+   ========================================================================== */
+.stories-page {
+  padding: 64px 0;
+  background-color: #ffffff;
+}
+
+.stories-page__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px; /* Jarak antar artikel kisah agar lega */
+}
+
+/* Kotak Artikel Utama */
+.story-article {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: #fbfbfb;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* Pembungkus Gambar */
+.story-article__image-wrapper {
+  width: 100%;
+  min-height: 280px;
+}
+
+.story-article__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Konten Teks di Dalam Kotak (Diberi padding 32px agar tidak mepet) */
+.story-article__content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.story-article__tag {
+  align-self: flex-start;
+  background-color: rgba(242, 107, 34, 0.1);
+  color: #f26b22;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.story-article__title {
+  font-size: 1.6rem;
+  color: #333333;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+.story-article__text {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.story-article__footer {
+  margin-top: 12px;
+}
+
+/* RESPONSIVE DESKTOP LAYOUT (Gaya Majalah Selang-seling) */
+@media screen and (min-width: 868px) {
+  .story-article {
+    flex-direction: row;
+  }
+
+  .story-article__image-wrapper,
+  .story-article__content {
+    width: 50%;
+  }
+
+  .story-article__image-wrapper {
+    min-height: 400px;
+  }
+
+  /* Membuat layout foto di kanan pada artikel genap/kedua */
+  .story-article--reverse {
+    flex-direction: row-reverse;
+  }
+}
