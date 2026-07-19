@@ -2,6 +2,27 @@
 
 Semua perubahan formal pada proyek ini didokumentasikan berdasarkan aturan spesifikasi **BAB 71 & 72**.
 
+# Changelog - DapurYatimDhuafa
+
+Semua perubahan formal pada proyek ini didokumentasikan berdasarkan aturan spesifikasi pengembangan MVP.
+
+## [v2.0.0] - 2026-07-19
+
+### Added (Ditambahkan)
+
+- **Komponen Navigasi Mobile**: Integrasi tombol `<button class="navbar__toggle">` di halaman internal (Tentang, Kemitraan, Kontak) untuk mendukung menu lipat hamburger di layar ponsel.
+- **Sistem Navigasi Anchor**: Penerapan ID Selector (`#kisah-bu-aminah` & `#kisah-pak-jaka`) pada halaman Kisah agar tombol dari Beranda dapat meluncur mulus ke posisi artikel mitra secara presisi.
+- **Sprint 2 hingga 6**: Penyelesaian arsitektur halaman Etalase Produk, Detail Produk, Profil Lembaga, Proposal CSR, dan Layanan Kontak Resmi.
+
+### Fixed (Diperbaiki)
+
+- **Resolusi Broken Layout Mobile**: Perbaikan kontener `.partnership-cta__actions` dengan menyuntikkan properti `gap: 16px;` vertikal agar tombol di layar HP tidak saling menindih.
+- **Broken Path Logo Footer**: Memperbaiki alamat gambar logo di kaki halaman internal dengan menambahkan jalur relatif `../` agar aset terbaca sempurna dari dalam sub-folder `pages/`.
+
+### Status Proyek
+
+- **Seluruh Halaman Web MVP (Total 6 Halaman Utama + 2 Detail)**: **SELESAI 100% / PERFECTLY DONE**.
+
 ## [v2.0.0] - 2026-07-19
 
 ### Added (Ditambahkan)

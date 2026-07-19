@@ -2,7 +2,7 @@
 
 Platform digital pemberdayaan ekonomi berbasis dampak sosial yang dikembangkan sebagai Foodcourt Online Terkurasi untuk menghubungkan hasil karya Mitra Binaan dengan masyarakat luas.
 
-## 📁 Arsitektur Folder Proyek Final (BAB 40 & 42)
+## 📁 Arsitektur Folder Proyek Final
 
 dapuryatimdhuafa/
 │
