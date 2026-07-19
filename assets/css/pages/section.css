@@ -557,15 +557,14 @@
   .partnership-cta__title {
     font-size: 1.75rem;
   }
-
   .partnership-cta__actions {
-    flex-direction: column; /* Tombol menumpuk vertical pada HP agar tidak sempit */
-    gap: var(--space-12);
+    display: flex;
+    flex-direction: column; /* Tetap menumpuk vertikal ke bawah agar aman di HP */
+    gap: 16px; /* SOLUSI: Memberikan jarak longgar antar tombol agar tidak menempel/tindih */
     align-items: center;
   }
-
   .partnership-cta .btn {
-    width: 100%; /* Tombol melebar penuh di layar HP */
+    width: 100%; /* Tombol melebar penuh dengan seimbang */
     max-width: 280px;
   }
 }
